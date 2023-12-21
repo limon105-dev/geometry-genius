@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genius</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.21/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <!-- main container -->
+        <div class="flex flex-col lg:flex-row">
+            <!-- shape container -->
+            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- triangle card -->
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure><img src="images/triangle.png" alt="triangle" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title justify-center font-bold text-2xl">Triangle</h2>
+                        <p class="text-base font-normal text-center">Area (A) = 0.5 x b x h</p>
+                        <p class="flex justify-center mb-8">
+                            <input class="bg-gray-100 rounded-md pl-4 py-2 px-3 w-24" type="number" name="" id="base"
+                                placeholder="Base"><span class="ml-2 leading-9">cm</span>
+                            <input class="bg-gray-100 rounded-md pl-4 py-2 ml-4 w-24" type="number" name="" id="height"
+                                placeholder="Height"><span class="ml-2 leading-9">cm</span>
+                        </p>
+                        <div class="card-actions justify-center">
+                            <button onclick="calculateTriangleArea()"
+                                class="btn btn-primary py-4 px-32 bg-cyan-500 border-none text-xl font-medium leading-4">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- rectangle card -->
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure><img src="images/rectangle.png" alt="rectangle" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title justify-center font-bold text-2xl">Rectangle</h2>
+                        <p class="text-base font-normal text-center">Area (A) = w x l</p>
+                        <p class="flex justify-center mb-8">
+                            <input class="bg-gray-100 rounded-md pl-4 py-2 px-3 w-24" type="number" name="" id="width"
+                                placeholder="Width"><span class="ml-2 leading-9">cm</span>
+                            <input class="bg-gray-100 rounded-md pl-4 py-2 ml-4 w-24" type="number" name="" id="length"
+                                placeholder="Length"><span class="ml-2 leading-9">cm</span>
+                        </p>
+                        <div class="card-actions justify-center">
+                            <button onclick="calculateRectriangleArea()"
+                                class="btn btn-primary py-4 px-32 bg-cyan-500 border-none text-xl font-medium leading-4">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- parallelogram card -->
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure><img src="images/parallelogram.png" alt="parallelogram" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title justify-center font-bold text-2xl">Parallelogram</h2>
+                        <p class="text-base font-normal text-center">Area (A) = b x h</p>
+                        <p class="flex justify-center mb-8">
+                            <input class="bg-gray-100 rounded-md pl-4 py-2 px-3 w-24" type="number" name=""
+                                id="parallelogram-base" placeholder="Base"><span class="ml-2 leading-9">cm</span>
+                            <input class="bg-gray-100 rounded-md pl-4 py-2 ml-4 w-24" type="number" name=""
+                                id="parallelogram-height" placeholder="Height"><span class="ml-2 leading-9">cm</span>
+                        </p>
+                        <div class="card-actions justify-center">
+                            <button onclick="calculateParallelogramArea()"
+                                class="btn btn-primary py-4 px-32 bg-cyan-500 border-none text-xl font-medium leading-4">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- ellipse card -->
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure><img src="images/ellipse.png" alt="ellipse" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title justify-center font-bold text-2xl">Ellipse</h2>
+                        <p class="text-base font-normal text-center">Area (A) = πab</p>
+                        <p class="flex justify-center mb-8">
+                            <input class="bg-gray-100 rounded-md pl-4 py-2 px-3 w-24" type="number" name=""
+                                id="ellipse-major-radius" placeholder="a"><span class="ml-2 leading-9">cm</span>
+                            <input class="bg-gray-100 rounded-md pl-4 py-2 ml-4 w-24" type="number" name=""
+                                id="ellipse-minor-radius" placeholder="b"><span class="ml-2 leading-9">cm</span>
+                        </p>
+                        <div class="card-actions justify-center">
+                            <button onclick="calculateEllipseArea()"
+                                class="btn btn-primary py-4 px-32 bg-cyan-500 border-none text-xl font-medium leading-4">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- area calculator -->
+            <div class="w-[400px]">
+                <div>
+                    <h3 class="text-4xl text-center border-b-4 border-black">
+                        Area Calulator
+                    </h3>
+                    <p class="text-2xl" id="result"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/calculate-area.js"></script>
+    <script src="js/function.js"></script>
+</body>
+
+</html>
